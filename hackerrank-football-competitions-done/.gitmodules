@@ -1,0 +1,6 @@
+[submodule "football"]
+	path = football
+	url = https://github.com/IsaacS09/hackerrank.git
+[submodule "hackerrank-football-competitions-done"]
+	path = hackerrank-football-competitions-done
+	url = https://github.com/IsaacS09/hackerrank.git
