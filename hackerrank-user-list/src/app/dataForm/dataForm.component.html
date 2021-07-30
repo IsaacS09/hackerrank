@@ -1,0 +1,15 @@
+<div class="layout-row">
+    <section [formGroup]="userData" class="layout-column align-items-center justify-content-center">
+        <input formControlName="name" name="name" type="text" data-test-id="app-input-name" placeholder="Name" />
+        <input formControlName="genre" name="genre" type="text" data-test-id="app-input-genre" placeholder="Genre" />
+        <input formControlName="creator" name="creator" type="text" data-test-id="app-input-creator" placeholder="Creator" />
+        <form formGroupName="typeForm">
+            <label><input formControlName="type" class="radioButton" data-test-id="app-input-book-type" type="radio" name="type" value="Book">Book</label>
+            <label><input formControlName="type" class="radioButton" data-test-id="app-input-song-type" type="radio" name="type" value="Song">Song</label>
+        </form>
+        <input *ngIf="userData.value.typeForm.type === 'Song'" formControlName="totalTime" name="time" data-test-id="app-input-time" type="number" placeholder="Total Time" />
+    </section>
+    <section class="layout-row justify-content-center align-items-center">
+        <button data-test-id="add-button" class="w-30" (click)="addUser(userData.value)">Add</button>
+    </section>
+</div>
